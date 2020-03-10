@@ -1,11 +1,11 @@
 create table study_group (
-    id int not null,
+    id int not null AUTO_INCREMENT,
     name text,
     primary key (id)
 );
 
 create table student (
-    id int not null,
+    id int not null AUTO_INCREMENT,
     surname text,
     name text,
     second_name text,
@@ -15,20 +15,20 @@ create table student (
 );
 
 create table subject (
-    id int not null,
+    id int not null AUTO_INCREMENT,
     name text,
     short_name text,
     primary key (id)
 );
 
 create table exam_type (
-    id int not null,
+    id int not null AUTO_INCREMENT,
     type text,
     primary key (id)
 );
 
 create table study_plan (
-    id int not null,
+    id int not null AUTO_INCREMENT,
     subject_id int,
     exam_type_id int,
     primary key (id),
@@ -37,14 +37,14 @@ create table study_plan (
 );
 
 create table mark (
-    id int not null,
+    id int not null AUTO_INCREMENT,
     name text,
     value text,
     primary key (id)
 );
 
 create table journal (
-    id int not null,
+    id int not null AUTO_INCREMENT,
     student_id int,
     study_plan_id int,
     in_time bit,
