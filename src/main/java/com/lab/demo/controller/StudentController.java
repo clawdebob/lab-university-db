@@ -28,6 +28,12 @@ public class StudentController
         return studentJdbc.getAll();
     }
 
+    @GetMapping("/local")
+    public List<Student> getAllLocalStudents()
+    {
+        return studentJdbc.getAllLocal();
+    }
+
     @GetMapping("/student/group/{id}")
     public List<Student> getStudentsFromGroup(@PathVariable int id)
     {
